@@ -23,3 +23,14 @@ body {
    height:60px;   /* Mesma Altura do Rodapé */
    
 }
+
+input[type="text"]{
+   background-color: transparent;
+   border: 0px;
+   outline: none;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+   width:5px;
+   cursor:default;
+}

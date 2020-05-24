@@ -2,6 +2,34 @@
    <link rel="stylesheet" type="text/css" href="cssTela.css">
    <link rel="stylesheet" type="text/css" href="estrutura.css">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <script> 
+    
+    function inserirValor(op)
+    {   
+         var linhaAlterar = document.getElementById("codigo");
+         var valorAntigo = linhaAlterar.innerHTML;
+         linhaAlterar.innerHTML = valorAntigo+' '+op;
+    }
+    
+    function verificarConsulta(){
+        var linhaConsulta = document.getElementById("codigo");
+        var consulta = linhaConsulta.innerHTML;
+
+        var result = consulta.localeCompare("  SELECT * FROM clientes ;");
+         alert(result);
+        if (result == 0){
+
+           alert("Acertou miseravi!");
+
+            }else {
+             alert("Errrrrrouuuuu");  
+            }
+
+
+
+    }
+
+</script>
 <body>
     <div class="tudo">
         <div class="topo">
@@ -12,14 +40,16 @@
             <div class="noise"></div>
             <div class="overlay"></div>
             <div class="terminal">
-              <h1> <span class="errorcode">Polícia Cibernética precisa de você!</span></h1>
-              <p class="output">O site da empresa X Corporate foi hackeado e você está sendo consultado para descobrir quais Informações
-                  vazaram e quem vazou. Você é capaz de ajudar?
+              <h1> <span class="errorcode">Missão 1</span></h1>
+              <div id="myDIV"> </div><p class="output">Deseja descobrir todos os clientes do banco
               </p>
-              <p class="output">Clique em <a href="../sqlGame/indexJogo.html">Entrar</a> para iniciar.</p>
-              <p class="output">Boa sorte.</p>
+              <h2 class="output" id="codigo"> </h2> 
+        
+              <button  onclick= "inserirValor('SELECT')">SELECT</button><button onclick= "inserirValor('*')">*</button><button onclick= "inserirValor('FROM')">FROM</button><button onclick= "inserirValor('clientes')">clientes</button>
+              <button onclick= "inserirValor(';')">;</button>
+            </div> 
             </div>
-            
+            <button onclick= "verificarConsulta()">Verificar</button> 
         </div>
         <div class = "rodape"><a href="#1">Como jogar? </a><a href="#1">Quem sou eu?</a> <a href="#1">Informações sobre o site</a></div>
     </div>
