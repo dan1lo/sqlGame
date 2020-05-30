@@ -1,35 +1,9 @@
 <html>
-   <link rel="stylesheet" type="text/css" href="cssTela.css">
-   <link rel="stylesheet" type="text/css" href="estrutura.css">
+   <link rel="stylesheet" type="text/css" href="css/cssTela.css">
+   <link rel="stylesheet" type="text/css" href="css/estrutura.css">
+   <script type="text/javascript" src="js/botoes.js"></script>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <script> 
-    
-    function inserirValor(op)
-    {   
-         var linhaAlterar = document.getElementById("codigo");
-         var valorAntigo = linhaAlterar.innerHTML;
-         linhaAlterar.innerHTML = valorAntigo+' '+op;
-    }
-    
-    function verificarConsulta(){
-        var linhaConsulta = document.getElementById("codigo");
-        var consulta = linhaConsulta.innerHTML;
-
-        var result = consulta.localeCompare("  SELECT * FROM clientes ;");
-         alert(result);
-        if (result == 0){
-
-           alert("Acertou miseravi!");
-
-            }else {
-             alert("Errrrrrouuuuu");  
-            }
-
-
-
-    }
-
-</script>
+  
 <body>
     <div class="tudo">
         <div class="topo">
@@ -43,13 +17,20 @@
               <h1> <span class="errorcode">Missão 1</span></h1>
               <div id="myDIV"> </div><p class="output">Deseja descobrir todos os clientes do banco
               </p>
-              <h2 class="output" id="codigo"> </h2> 
+              <h2 class="output" id="codigo"></h2> 
         
-              <button  onclick= "inserirValor('SELECT')">SELECT</button><button onclick= "inserirValor('*')">*</button><button onclick= "inserirValor('FROM')">FROM</button><button onclick= "inserirValor('clientes')">clientes</button>
+              <button  onclick= "inserirValor('SELECT')">SELECT</button>
+              <button onclick= "inserirValor('*')">*</button>
+              <button onclick= "inserirValor('FROM')">FROM</button>
+              <button onclick= "inserirValor('clientes')">clientes</button>
               <button onclick= "inserirValor(';')">;</button>
+            </br>
+            <button onclick= "verificarConsulta()">Verificar</button> <button onclick= "limparUltimo()">Apagar ultimo comando</button> 
             </div> 
-            </div>
-            <button onclick= "verificarConsulta()">Verificar</button> 
+             
+                
+        </div>
+            
         </div>
         <div class = "rodape"><a href="#1">Como jogar? </a><a href="#1">Quem sou eu?</a> <a href="#1">Informações sobre o site</a></div>
     </div>
