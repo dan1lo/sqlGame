@@ -1,13 +1,24 @@
 <?php
-include "ConectorBanco.php";
+  include "ConectorBanco.php";
+class FabricaConexoes{
 
-$bd = new ConectorBanco();
-
+    private $bd;
+    private $conn;
+    public function __construct(){
+        $this->bd = new ConectorBanco();
+    }
 //  Create a new connection to the MySQL database using PDO
-$conn = new mysqli($bd->getServer(), $bd->getUser(), $bd->getPass());
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+    public function criarConexao() {
+        try {
+            $this->conn = new PDO($this->bd->getServer(),$this->bd->getUser(), $this->bd->getPass());
+            return $this->conn;
+        // Check connection
+        }catch (PDOException $e) {
+        return "Erro: Conexão com banco de dados não foi realizada com sucesso. Erro gerado " 
+        . $e->getMessage();
+        }
+
+    }
+
+}
 ?>

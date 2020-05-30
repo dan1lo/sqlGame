@@ -23,7 +23,7 @@ class Questões{
         $this->errada = $errada;
     }
     public function getErrada(){
-        return $this->errada
+        return $this->errada;
     }
     public function setPergunta($pergunta){
         $this->pergunta = $pergunta;

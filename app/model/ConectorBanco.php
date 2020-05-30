@@ -1,9 +1,18 @@
 <?php
     class ConectorBanco{
-        private $servername = "localhost";
-        private $username = "localhost";
-        private $database = "sqlGame";
-        private $password = "";
+        private $servername ;
+        private $username;
+        private $database;
+        private $password;
+
+        public function __construct(){
+            $this->servername = "mysql:host=localhost;dbname=sqlGame";
+            $this->username = "root";
+            $this->database = "sqlGame";
+            $this->password = "";
+    
+
+        }
 
         public function getServer(){
             return $this->servername;
