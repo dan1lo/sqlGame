@@ -11,7 +11,8 @@ O objetivo do jogo é encontrar os bandidos que invadiram um banco, você é con
 - Deixar dinamico
 - Deixar botões bonitos
 - Criar história
-
+- criar gif final do terminal piscando
+-
 
 
 
