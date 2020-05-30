@@ -123,3 +123,9 @@ a::after {
 .errorcode {
   color: white;
 }
+.div
+{
+  width: 100%; 
+  height: 100px;/* Aqui você pode alterar */
+  display: flex;
+}
