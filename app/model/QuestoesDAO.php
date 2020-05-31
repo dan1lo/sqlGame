@@ -18,7 +18,7 @@ class QuestoesDAO{
 
     public function selecionarNivel($nivel){
         
-        $linha = $this->sql->query('SELECT nivel FROM questoes;', PDO::FETCH_ASSOC);
+        $linha = $this->sql->query('SELECT * FROM questoes WHERE nivel=1;', PDO::FETCH_ASSOC);
         //$stmt->bindValue(':nivel',"nivel" );
         //$stmt->bindValue(':senha', $senha);
        // $run = $stmt->execute();
