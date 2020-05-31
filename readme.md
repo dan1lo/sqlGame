@@ -12,7 +12,7 @@ O objetivo do jogo é encontrar os bandidos que invadiram um banco, você é con
 - Deixar botões bonitos
 - Criar história
 - criar gif final do terminal piscando
--
+- Corrigir ajax questões sql
 
 
 
