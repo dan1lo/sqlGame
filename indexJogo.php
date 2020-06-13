@@ -1,7 +1,7 @@
 <html>
    <link rel="stylesheet" type="text/css" href="css/cssTela.css">
    <link rel="stylesheet" type="text/css" href="css/estrutura.css">
-   <script type="text/javascript" src="js/botoes.js"></script>
+   <script type="text/javascript" src="js/jogo.js"></script>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   
 <body>
@@ -19,11 +19,11 @@
               </p>
             <div class="output" id="codigo" style="float: left;" ></div><div style="float: right;"><img src="img/quebra.gif" width=10 height=40></div>
             </br>
-              <button  onclick= "inserirValor('SELECT')">SELECT</button>
-              <button onclick= "inserirValor('*')">*</button>
-              <button onclick= "inserirValor('FROM')">FROM</button>
-              <button onclick= "inserirValor('clientes')">clientes</button>
-              <button onclick= "inserirValor(';')">;</button>
+              <button  onclick= "inserirValor('SELECT')" id="btn_op1">SELECT</button>
+              <button onclick= "inserirValor('*')" id="btn_op2">*</button>
+              <button onclick= "inserirValor('FROM')" id="btn_op3">FROM</button>
+              <button onclick= "inserirValor('clientes')" id="btn_op4">clientes</button>
+              <button onclick= "inserirValor(';')" id="btn_op5">;</button>
             </br>
             <button onclick= "verificarConsulta()">Verificar</button> <button onclick= "limparUltimo()">Apagar ultimo comando</button> 
             </div> 
