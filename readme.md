@@ -5,13 +5,13 @@ O objetivo do jogo é encontrar os bandidos que invadiram um banco, você é con
  
  
 #Lista de atividades
-- criar perguntas dinamicamente
-- criar botões dinamicamente
-- mudar perguntas dinamicamente
+- criar botões dinamicamente (bugando alguns botoes)
+- mudar valor passado por parametro no botão por javascript.
 - Deixar botões bonitos
 - Criar história
 - criar gif final do terminal piscando
 - Corrigir ajax questões sql
+
 
 
 
