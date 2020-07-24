@@ -16,12 +16,11 @@ $dados = $questoes->selecionarNivel(1);
 $array = array();
 foreach ($dados as $row) {
     array_push($array, array (
-        'nivel:'.$row['nivel'],
-        'pergunta:'.$row['pergunta'],
-        'resposta:'.$row['resposta'],
-        'errada:'.$row['errada']
-    ));  
-
+        'nivel'=> $row['nivel'],
+        'pergunta' => $row['pergunta'],
+        'resposta' => $row['resposta'],
+        'errada' => $row['errada']
+    ));
 
 }
 header("content-type: application/json");
