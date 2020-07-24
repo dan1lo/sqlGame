@@ -20,6 +20,7 @@ function verificarConsulta(){
        //this.nextLevel();
        var array = ['SELECT', '*', 'FROM', 'pessoas', ';', 'oi'];
        var m = array.length;
+       var n = m;
        var i;
        var t;
        while(m){
@@ -29,14 +30,28 @@ function verificarConsulta(){
         array[i] =t;
 
        } 
+       i=0
+       while (n != 1){
+           n--;
+           var local = document.getElementById("botoesRespostas");
+           var button = document.createElement('button');
+           button.setAttribute('type','button');
+           button.setAttribute('name','btn_op'+i+'');
+           button.setAttribute('value', array[i]);
+           button.setAttribute('text', array[i]);
+           button.setAttribute('onclick', "inserirValor('"+array[i]+"')" );
+           button.textContent = array[i];
+           i++;
+           local.appendChild(button);
 
+       }
 
-      document.getElementById('btn_op1').innerHTML = array[0];
-      document.getElementById('btn_op2').innerHTML = array[1];
-      document.getElementById('btn_op3').innerHTML = array[2];
-      document.getElementById('btn_op4').innerHTML = array[3];
-      document.getElementById('btn_op5').innerHTML = array[4];
+       var missao = document.getElementById("missaoNumero");
+       var pergunta = document.getElementById("pergunta");
+       missao.innerHTML = "2";
+       pergunta.innerHTML ="Segunda pergunta"; 
 
+      
      
 
         }else {
