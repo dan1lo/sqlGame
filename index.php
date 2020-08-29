@@ -12,7 +12,7 @@
               <p class="output">O site da empresa X Corporate foi hackeado e você está sendo consultado para descobrir quais Informações
                   vazaram e quem vazou. Você é capaz de ajudar?
               </p>
-              <p class="output">Clique em <a href="../sqlGame/indexJogo.html">Entrar</a> para iniciar.</p>
+              <p class="output">Clique em <a href="../sqlGame/indexJogo.php">Entrar</a> para iniciar.</p>
               <p class="output">Boa sorte.</p>
             </div>
             

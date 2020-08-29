@@ -5,7 +5,7 @@ O objetivo do jogo é encontrar os bandidos que invadiram um banco, você é con
  
  
 #Lista de atividades
-- criar botões dinamicamente (bugando alguns botoes)
+- criar botões de acordo com a quantidade de resposta
 - mudar valor passado por parametro no botão por javascript.
 - Deixar botões bonitos
 - Criar história

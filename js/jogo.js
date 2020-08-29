@@ -18,31 +18,13 @@ function inserirValor(op)
 function verificarConsulta(){
     var linhaConsulta = document.getElementById("codigo");
     var consulta = linhaConsulta.innerHTML;
-
     var result = consulta.localeCompare(resposta);
     if (result == 0){
        alert("Acertou miseravi!!");
-     /*  var array = ['SELECT', '*', 'FROM', 'pessoas', ';', 'oi'];
-       var m = array.length;
-       var i;
-       var t;
-       while(m){
-        i = Math.floor(Math.random() * m--);
-        t= array[m];
-        array[m] = array[i];
-        array[i] =t;
-       } 
-
- */
-    
-     /* document.getElementById('btn_op2').innerHTML = array[1];
-      document.getElementById('btn_op3').innerHTML = array[2];
-      document.getElementById('btn_op4').innerHTML = array[3];
-      document.getElementById('btn_op5').innerHTML = array[4];
-     */
      
-      this.nextLevel();
-        }else {
+       this.nextLevel();
+      
+    }else {
          alert("Errrrrrouuuuu");  
         }
 
@@ -73,8 +55,8 @@ function limparUltimo()
 
 function nextLevel(){
     $.getJSON( "../sqlGame/app/model/ajaxQuestao.php", function( data ) {
-        //var teste = JSON.stringify(data);
-        //alert(teste);
+      
+        
         $.each(data,function(idx,obj){
             var linhaMissao = document.getElementById("missao");
             
@@ -86,25 +68,21 @@ function nextLevel(){
             var arrayResposta =[];
             arrayResposta = resposta.split(" ");
             arrayResposta.push(JSON.stringify(obj.errada) );
+            
             alert(arrayResposta);
-            var array = [];
-            var m = arrayResposta.length;
-            var i;
-            var t;
-            while(m){
-             i = Math.floor(Math.random() * m--);
-             t = arrayResposta[m];
-             array[i] =t;
+            for (let i = arrayResposta.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arrayResposta[i], arrayResposta[j]] = [arrayResposta[j], arrayResposta[i]];
+            }
      
-            } 
+            //preciso refatorar para criar os botões de respostas de acordo com a consulta e nao fixo   
      
-     
-           document.getElementById('btn_op1').innerHTML = array[0];
-           document.getElementById('btn_op2').innerHTML = array[1];
-           document.getElementById('btn_op3').innerHTML = array[2];
-           document.getElementById('btn_op4').innerHTML = array[3];
-           document.getElementById('btn_op5').innerHTML = array[4];
-           document.getElementById('btn_op6').innerHTML = array[5];
+           document.getElementById('btn_op1').innerHTML = arrayResposta[0];
+           document.getElementById('btn_op2').innerHTML = arrayResposta[1];
+           document.getElementById('btn_op3').innerHTML = arrayResposta[2];
+           document.getElementById('btn_op4').innerHTML = arrayResposta[3];
+           document.getElementById('btn_op5').innerHTML = arrayResposta[4];
+           document.getElementById('btn_op6').innerHTML = arrayResposta[5];
      
            
 
