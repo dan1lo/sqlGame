@@ -21,42 +21,6 @@ function verificarConsulta(){
     var result = consulta.localeCompare(resposta);
     if (result == 0){
        alert("Acertou miseravi!!");
-<<<<<<< HEAD
-=======
-     var array = ['SELECT', '*', 'FROM', 'pessoas', ';', 'oi'];
-       var m = array.length;
-       var n = m;
-       var i;
-       var t;
-       while(m){
-        i = Math.floor(Math.random() * m--);
-        t= array[m];
-        array[m] = array[i];
-        array[i] =t;
-       } 
-       i=0
-       while (n != 1){
-           n--;
-           var local = document.getElementById("botoesRespostas");
-           var button = document.createElement('button');
-           button.setAttribute('type','button');
-           button.setAttribute('name','btn_op'+i+'');
-           button.setAttribute('value', array[i]);
-           button.setAttribute('text', array[i]);
-           button.setAttribute('onclick', "inserirValor('"+array[i]+"')" );
-           button.textContent = array[i];
-           i++;
-           local.appendChild(button);
-
-       }
-
-       var missao = document.getElementById("missaoNumero");
-       var pergunta = document.getElementById("pergunta");
-       missao.innerHTML = "2";
-       pergunta.innerHTML ="Segunda pergunta"; 
-
-      
->>>>>>> bb9c843a2ec7ec11d883839f25f3a15613929fbc
      
        this.nextLevel();
       

@@ -27,15 +27,8 @@
               <button onclick= "inserirValor('FROM')" id="btn_op3">FROM</button>
               <button onclick= "inserirValor('clientes')" id="btn_op4">clientes</button>
               <button onclick= "inserirValor(';')" id="btn_op5">;</button>
-<<<<<<< HEAD
-             
-            <br>
-            </div>
-            <div>
-=======
               <button onclick= "inserirValor('lala')" id="btn_op6">lala</button>
             </br>
->>>>>>> 647a15d0a7a0254501079c43c015704df893446e
             <button onclick= "verificarConsulta()">Verificar</button> <button onclick= "limparUltimo()">Apagar ultimo comando</button> 
             <br>
             </div> 
