@@ -16,19 +16,28 @@
             <div class="noise"></div>
             <div class="overlay"></div>
             <div class="terminal">
-              <h1> <span class="errorcode" id = "missao" >Missão 1</span></h1>
-            <p class="output"  id="pergunta">Deseja descobrir todos os clientes do banco
+              <h1> <span class="errorcode">Missão <span id="missaoNumero">1 </span></span></h1>
+            <p class="output"><span id="pergunta">Deseja descobrir todos os clientes do banco </span>
               </p>
             <div class="output" id="codigo" style="float: left;" ></div><div style="float: right;"><img src="img/quebra.gif" width=10 height=40></div>
-            </br>
+            <br>
+            <div id="botoesRespostas">
               <button  onclick= "inserirValor('SELECT')" id="btn_op1">SELECT</button>
               <button onclick= "inserirValor('*')" id="btn_op2">*</button>
               <button onclick= "inserirValor('FROM')" id="btn_op3">FROM</button>
               <button onclick= "inserirValor('clientes')" id="btn_op4">clientes</button>
               <button onclick= "inserirValor(';')" id="btn_op5">;</button>
+<<<<<<< HEAD
+             
+            <br>
+            </div>
+            <div>
+=======
               <button onclick= "inserirValor('lala')" id="btn_op6">lala</button>
             </br>
+>>>>>>> 647a15d0a7a0254501079c43c015704df893446e
             <button onclick= "verificarConsulta()">Verificar</button> <button onclick= "limparUltimo()">Apagar ultimo comando</button> 
+            <br>
             </div> 
              
                 
